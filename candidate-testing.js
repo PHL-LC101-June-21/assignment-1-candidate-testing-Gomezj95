@@ -8,7 +8,7 @@ let candidateName = "";
 let question;
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-let questions = "Who was the first American woman in space?  ";
+let questions = "Who was the first American woman in space? ";
 let correctAnswers;
 let candidateAnswers;
 
