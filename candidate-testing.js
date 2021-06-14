@@ -9,7 +9,7 @@ let question;
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 let questions = "Who was the first American woman in space? ";
-let correctAnswers = ;
+let correctAnswers;
 let candidateAnswers;
 
 
@@ -25,7 +25,7 @@ candidateAnswer = input.question(questions)
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer === correctAnswers){
+if (candidateAnswer === correctAnswer){
 console.log("Good Job! You're Right")
 } else{
 console.log("Sorry, incorrect.")
