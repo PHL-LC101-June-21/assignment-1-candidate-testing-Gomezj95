@@ -7,7 +7,7 @@ let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question;
 let correctAnswer;
-let candidateAnswer = "Sally Ride";
+let candidateAnswer = "";
 let questions = "Who was the first American woman in space? ";
 let correctAnswers = "Sally Ride";
 let candidateAnswers;
