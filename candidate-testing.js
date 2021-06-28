@@ -27,9 +27,40 @@ for(i=0;i<questions.length;i++){
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  console.log(`Candidate Name:${candidateName}`)
  for(i=0;i<correctAnswers.length;i++){
-    console.log(`You answered ${candidateAnswers[i]}, the correct answer was ${correctAnswers[i]}`)
+   let numquestion = ['1)','2)','3)','4)','5)']
+    console.log(`${numquestion[i]}${questions[i]}
+    Your Answer: ${candidateAnswers[i]}
+    Correct Answer: ${correctAnswers[i]}`)
 }
+console.log(`>>> Overall Grade: ${percent()}% (${compare()} of ${questions.length} reponses correct) <<<
+>>> Status: ${passOrFail()} <<<`)
+}
+
+// compares candidateAnswers against correctAnswers// 
+function compare(){
+  let num = 0
+  for(i=0;i<correctAnswers.length;i++){
+    if((correctAnswers[i]).toLowerCase().trim() === (candidateAnswers[i]).toLowerCase().trim() ){
+      num = num + 1
+    }
+  }
+  return num
+}
+
+//calcuate the percentage of the test score// 
+function percent(){
+  return (compare()/questions.length)*100
+}
+
+//Prints Pass or Fail depending on the percentage // 
+function passOrFail(){
+  if(percent() >= 80){
+    return 'PASSED'
+  } else {
+    return 'FAILED'
+  }
 }
 
 function runProgram() {
@@ -39,7 +70,10 @@ function runProgram() {
 
   askQuestion();
   gradeQuiz(this.candidateAnswers);
+
 }
+
+
 
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
